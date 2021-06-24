@@ -1,14 +1,278 @@
-/* Create two equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+.main {
+    margin-top: 60px;
+    overflow: hidden
+}
+
+@media (max-width:840px) {
+    .main {
+        margin-top: 60px
+    }
+}
+
+.tools {
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 68px 42px
+}
+
+@media (max-width:90em) {
+    .tools {
+        padding: 0 32px 32px
+    }
+}
+
+@media (max-width:960px) {
+    .tools {
+        padding: 0 24px 24px
+    }
+}
+
+.tools__container {
+    text-decoration: none;
+    
+    color:#fff;
+    
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+
+.tools__item {
+    color: white;
+    -ms-flex: 0 0 16.666%;
+    flex: 0 0 16.666%;
+    
+   
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    z-index: 1
+}
+
+.tools__item svg {
+    width: 50px;
+    height: 50px
+}
+
+@media (max-width:90em) {
+    .tools__item svg {
+        width: 42px;
+        height: 42px
+    }
+}
+
+.tools__item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 32px;
+    color: #383e45;
+    position: relative;
+    z-index: 2
+}
+
+@media (max-width:90em) {
+    .tools__item {
+        font-size: 36px;
+        line-height: 38px;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%
+    }
+    .tools__item a {
+        padding: 24px
+    }
+}
+
+@media (max-width:1300px) {
+    .tools__item {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%
+    }
+}
+
+@media (max-width:1280px) {
+    .tools__item {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%
+    }
+}
+
+@media (max-width:960px) {
+    .tools__item {
+        -ms-flex: 0 0 33.333%;
+        flex: 0 0 33.333%
+    }
+}
+
+@media (max-width:640px) {
+    .tools__item {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%
+    }
+    .tools__item a {
+        padding: 24px
+    }
+}
+
+@media (max-width:440px) {
+    .tools__item {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%
+    }
+    .tools__item a {
+        padding: 12px
+    }
+}
+
+.tools__item__icon,
+.tools__item h3 {
+    margin-bottom: 12px
+}
+
+.tools__item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: #fff;
+    margin-bottom: 9px
+}
+
+@media (max-width:62em) {
+    .tools__item h3 {
+        font-size: 18px;
+        line-height: 26px
+    }
+}
+
+@media (max-width:840px) {
+    .tools__item h3 {
+        font-size: 16px;
+        line-height: 24px
+    }
+}
+
+@media (max-width:460px) {
+    .tools__item h3 {
+        
+        font-size: 18px;
+        line-height: 22px
+    }
+}
+
+.tools__item__content {
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+}
+
+.tools__item__content p {
+    letter-spacing: .5px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+}
+
+.tools__item:after {
+    -webkit-transform: translateX(30%) skew(-30deg);
+    transform: translateX(30%) skew(-30deg);
+    opacity: 0;
+    width: 120%
+}
+
+.tools__item svg {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none
+}
+
+.tools__item:hover {
+    z-index: 999;
+    
+}
+
+.tools__item:hover h3 {
+    color: #000;
+}
+
+.tools__item:hover svg {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.tools__item:hover p {
+    color: #000;
+}
+
+.tools-mini {
+    margin-top: 12px;
+    margin-bottom: 32px
+}
+
+.tools-mini .title2 {
+    text-align: center
+}
+
+.tools-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.tools-list .tools-list__item {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 6px
+}
+
+.tools-list .tools-list__item a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+    border-radius: 100%
+}
+
+.tools-list .tools-list__item a svg {
+    width: 50px
+}
+
+.tools-list .tools-list__item a:hover .zone-white {
+    fill: #fff
+}
+
+.tools-list .tools-list__item a:hover .zone-dark {
+    fill: #ff6a58
+}
+
+.tools-list .tools-list__item a:hover .zone-light {
+    fill: #fff
+}
+
+.tools-list .tools-list__item a:hover .zone-black {
+    fill: #e5322d
+}
+
